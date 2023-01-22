@@ -1,10 +1,8 @@
 from backend import app
 from flask import render_template, request
 import openai
-from flask_cors import CORS
 
 openai.api_key = app.config['OPENAI_API_KEY']
-CORS(app)
 
 def summarizePrompt(prompt):
     response = openai.Completion.create(model="text-davinci-003", prompt="Summarize this for a second-grade student:\n\n"+prompt, temperature=0.7, max_tokens=64, top_p=1.0, frequency_penalty=0.0, presence_penalty=0.0)
