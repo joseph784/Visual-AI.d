@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
+  const [picture, setPicture] = useState("");
+
+  useEffect(() => {
+    console.log(picture);
+  }, [picture]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 class="text-purple-500 justify-center">Piclingo</h1>
+      <img alt="OpenAI!" src={picture} />
+      <input />
+      <button
+        onClick={() => {
+          axios.get("http://127.0.0.1:5000/test").then(
+            (response) => {
+              console.log(response.data);
+              setPicture(response.data);
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
+        }}
+      >
+        Generate
+      </button>
+      <button
+        onClick={() => {
+          console.log(picture);
+        }}
+      >
+        Test
+      </button>
     </div>
   );
 }
