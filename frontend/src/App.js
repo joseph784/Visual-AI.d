@@ -16,7 +16,7 @@ function App() {
       <input />
       <button
         onClick={() => {
-          axios.get("http://127.0.0.1:5000/test").then(
+          axios.get("http://127.0.0.1:5000/").then(
             (response) => {
               console.log(response.data);
               setPicture(response.data);
