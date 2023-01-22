@@ -11,7 +11,7 @@ def summarizePrompt(prompt):
 def createImageFromPrompt(prompt):
     prompt = summarizePrompt(prompt)
     response = openai.Image.create(prompt=prompt, n=1, size="256x256")
-    return response['data'][0]
+    return response['data'][0]['url']
 
 @app.route('/')
 def index():
