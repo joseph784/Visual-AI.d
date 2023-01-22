@@ -36,3 +36,114 @@
     transform: rotate(360deg);
   }
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-purple-500 {
+  color: #742aff;
+}
+
+.text-gray-500 {
+  color: #6c757d;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-purple-500 {
+  background-color: #742aff;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 400px;
+  width: 300px;
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.bg-color {
+  background-color: rgb(0, 0, 0);
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(88, 18, 168);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #620ea7;
+  color: white;
+}
+
+
+.popup {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.popup.show {
+  display: block;
+}
+
+
+
+.text-wrap {
+  width: 300px; 
+  overflow-wrap: break-word; 
+}
