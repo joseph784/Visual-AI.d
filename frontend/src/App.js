@@ -9,7 +9,8 @@ function App() {
   const handleClick = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/");
+      console.log(caption)
+      const response = await axios.get("http://localhost:5000/?prompt=${caption}");
       console.log(response.data);
       setPicture(response.data);
     } catch (error) {
@@ -26,7 +27,6 @@ function App() {
       <input
         onChange={(event) => {
           setCaption(event.target.value);
-          console.log(caption);
         }}
       />
       <button onClick={handleClick}>Generate</button>
