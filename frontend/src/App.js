@@ -10,7 +10,7 @@ function App() {
     setLoading(true);
     try {
       console.log(caption)
-      const response = await axios.get("http://localhost:5000/?prompt=${caption}");
+      const response = await axios.get(`http://localhost:5000/?prompt=${caption}`);
       console.log(response.data);
       setPicture(response.data);
       setCaption("");
