@@ -3,6 +3,7 @@ import axios from "axios";
 
 function App() {
   const [picture, setPicture] = useState("");
+  const [caption, setCaption] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {
@@ -21,12 +22,13 @@ function App() {
   return (
     <div>
       <h1 className="text-purple-500 justify-center">Piclingo</h1>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <img alt="OpenAI!" src={picture} />
-      )}
-      <input />
+      {loading ? <p>Loading...</p> : <img alt="OpenAI!" src={picture} />}
+      <input
+        onChange={(event) => {
+          setCaption(event.target.value);
+          console.log(caption);
+        }}
+      />
       <button onClick={handleClick}>Generate</button>
     </div>
   );
