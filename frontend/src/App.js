@@ -13,6 +13,7 @@ function App() {
       const response = await axios.get("http://localhost:5000/?prompt=${caption}");
       console.log(response.data);
       setPicture(response.data);
+      setCaption("");
     } catch (error) {
       console.log(error);
     } finally {
