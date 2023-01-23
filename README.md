@@ -1,3 +1,5 @@
+# Visual.ai.d
+
 Visual.ai.d is an innovative application that uses OpenAI's DALL-E and Davinci to summarize short stories or other short descriptors and generates a summarized visual picture for the reader. The goal of the project is to provide a unique and engaging way for users to consume and understand written content as well as a visual learning tool for those who have learning disabilities.
 
 The application will allow users to input a short story or other short descriptor and the application will then use Davinci to summarize the input and provide a brief summary for the user. Then Visual.ai.d uses DALL-E to generate a summarized picture that represents the main idea of the story. The user will be able to see the summarized picture, making it easy for them to understand the main idea of the story.
